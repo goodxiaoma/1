@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>湖北提前批网申全面启动啦！</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 配置Tailwind自定义颜色和字体 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6B6B',
+                        secondary: '#4ECDC4',
+                        accent: '#FFD166',
+                        dark: '#292F36',
+                    },
+                    fontFamily: {
+                        funny: ['Comic Sans MS', 'cursive', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .animate-float {
+                animation: float 3s ease-in-out infinite;
+            }
+            .animate-wiggle {
+                animation: wiggle 2s ease-in-out infinite;
+            }
+            .animate-spin-slow {
+                animation: spin 8s linear infinite;
+            }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-50 to-blue-50 min-h-screen font-funny">
+    <!-- 顶部导航 -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-rocket text-primary text-2xl animate-pulse"></i>
+                <span class="text-xl font-bold text-dark">网申突击小队</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-primary transition-colors duration-300">啥是提前批？</a>
+                <a href="#memes" class="hover:text-primary transition-colors duration-300">搞笑指南</a>
+                <a href="#tips" class="hover:text-primary transition-colors duration-300">申申申技巧</a>
+                <a href="#action" class="bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/80 transform hover:scale-105 transition-all duration-300">冲鸭！</a>
+            </div>
+            <button class="md:hidden text-dark text-xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <header class="relative overflow-hidden py-16 md:py-24">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-accent/30 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center">
+            <div class="inline-block mb-4 bg-accent/50 px-4 py-1 rounded-full transform rotate-3">
+                <p class="text-dark/80 font-bold">紧急通知！非看不可！</p>
+            </div>
+            
+            <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold text-dark leading-tight mb-6 animate-float">
+                湖北<span class="text-primary">提前批网申</span><br>
+                <span class="text-secondary">全面启动啦！</span>
+            </h1>
+            
+            <p class="text-[clamp(1rem,3vw,1.5rem)] text-dark/80 max-w-2xl mx-auto mb-10">
+                别再躺平啦！机会来了，手慢无！再不申，隔壁老王都要笑你啦！
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                <a href="#action" class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-bold transform hover:scale-105 hover:-rotate-1 transition-all duration-300 shadow-lg">
+                    <i class="fa fa-paper-plane mr-2"></i>立即网申
+                </a>
+                <a href="#tips" class="bg-white hover:bg-gray-100 text-dark px-8 py-4 rounded-full text-lg font-bold transform hover:scale-105 hover:rotate-1 transition-all duration-300 shadow-lg">
+                    <i class="fa fa-lightbulb-o mr-2"></i>申申申攻略
+                </a>
+            </div>
+            
+            <!-- 主图 -->
+            <div class="relative max-w-2xl mx-auto">
+                <img src="https://picsum.photos/seed/application1/800/400" alt="学生们兴奋地申请提前批的搞笑图片" class="rounded-2xl shadow-2xl animate-wiggle">
+                <div class="absolute -top-5 -right-5 bg-accent text-dark px-4 py-2 rounded-full transform rotate-12 shadow-lg">
+                    <p class="font-bold">不看后悔一年！</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 关于部分 -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-dark mb-4">啥是<span class="text-primary">提前批</span>啊？</h2>
+                <p class="text-dark/70 max-w-2xl mx-auto">让我用人话给你解释解释，别再一脸懵逼啦！</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <div class="bg-blue-50 p-6 rounded-2xl shadow-lg mb-6 transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-start">
+                            <div class="bg-secondary/20 p-3 rounded-full mr-4">
+                                <i class="fa fa-trophy text-secondary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">就是抢先一步！</h3>
+                                <p class="text-dark/70">别人还在睡懒觉的时候，你已经拿到offer了！就像食堂打饭抢第一样爽！</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-50 p-6 rounded-2xl shadow-lg mb-6 transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-start">
+                            <div class="bg-green-500/20 p-3 rounded-full mr-4">
+                                <i class="fa fa-calendar-check-o text-green-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">时间不等人！</h3>
+                                <p class="text-dark/70">窗口期短得像夏天的冰淇淋，不抓紧就化了！错过了拍大腿都来不及！</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-purple-50 p-6 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-start">
+                            <div class="bg-purple-500/20 p-3 rounded-full mr-4">
+                                <i class="fa fa-star text-purple-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">机会多多！</h3>
+                                <p class="text-dark/70">多一次机会，多一份保障！就像考试多带一支笔，稳！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="https://picsum.photos/seed/application2/600/600" alt="一个学生惊讶地看着提前批申请表格的搞笑图片" class="rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-6 -left-6 bg-accent p-4 rounded-full shadow-lg animate-spin-slow">
+                        <i class="fa fa-clock-o text-dark text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 搞笑图片区域 -->
+    <section id="memes" class="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-dark mb-4">网申的那些<span class="text-secondary">搞笑瞬间</span></h2>
+                <p class="text-dark/70 max-w-2xl mx-auto">看看这些是不是你的真实写照？别笑，说的就是你！</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 搞笑图片1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/meme1/500/300" alt="学生熬夜填网申表格，头发凌乱的搞笑图片" class="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p class="text-white p-4">凌晨三点还在改简历的你</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">deadline战士</h3>
+                        <p class="text-dark/70">不到最后一刻绝不行动，主打一个刺激！</p>
+                    </div>
+                </div>
+                
+                <!-- 搞笑图片2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/meme2/500/300" alt="学生发现自己填错信息后的崩溃表情" class="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p class="text-white p-4">发现填错身份证号的你</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">手滑星人</h3>
+                        <p class="text-dark/70">一个手抖，信息全错，心态崩了呀！</p>
+                    </div>
+                </div>
+                
+                <!-- 搞笑图片3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/meme3/500/300" alt="学生同时打开多个网申页面，一脸迷茫的样子" class="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p class="text-white p-4">同时申请N个学校的你</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">广撒网大师</h3>
+                        <p class="text-dark/70">总有一个会中吧？主打一个概率！</p>
+                    </div>
+                </div>
+                
+                <!-- 搞笑图片4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/meme4/500/300" alt="学生对着电脑屏幕祈祷的搞笑图片" class="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p class="text-white p-4">提交后求神拜佛的你</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">玄学爱好者</h3>
+                        <p class="text-dark/70">转发这个锦鲤，网申一定过！</p>
+                    </div>
+                </div>
+                
+                <!-- 搞笑图片5 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/meme5/500/300" alt="学生发现网申系统崩溃时的无奈表情" class="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p class="text-white p-4">发现系统崩溃的你</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">系统崩溃受害者</h3>
+                        <p class="text-dark/70">千辛万苦填完，一点提交就崩溃！</p>
+                    </div>
+                </div>
+                
+                <!-- 搞笑图片6 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/seed/meme6/500/300" alt="学生收到网申成功通知后狂喜的样子" class="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <p class="text-white p-4">收到通过通知的你</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">成功上岸者</h3>
+                        <p class="text-dark/70">激动到原地劈叉！我做到了！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 申请技巧部分 -->
+    <section id="tips" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-dark mb-4">网申<span class="text-primary">通关秘籍</span></h2>
+                <p class="text-dark/70 max-w-2xl mx-auto">这些骚操作让你事半功倍，别告诉别人哦！</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 技巧1 -->
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-2xl shadow-lg border border-yellow-100">
+                    <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fa fa-calendar text-dark text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">别当拖延症晚期</h3>
+                    <p class="text-dark/70 text-center">别等到最后一天才提交，服务器可能会被你们这些拖延症挤爆！提前三天搞定，睡个安稳觉不香吗？</p>
+                </div>
+                
+                <!-- 技巧2 -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl shadow-lg border border-blue-100">
+                    <div class="w-14 h-14 bg-secondary rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fa fa-check-square-o text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">信息填三遍</h3>
+                    <p class="text-dark/70 text-center">重要的事情说三遍：检查！检查！再检查！填错性别都算小事，填错身份证号才是真·社死现场！</p>
+                </div>
+                
+                <!-- 技巧3 -->
+                <div class="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-2xl shadow-lg border border-red-100">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fa fa-cloud-upload text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">文件提前准备</h3>
+                    <p class="text-dark/70 text-center">照片、成绩单什么的提前弄好，别等到上传时才发现格式不对！jpg、png傻傻分不清的赶紧补课！</p>
+                </div>
+            </div>
+            
+            <!-- 搞笑警告 -->
+            <div class="mt-16 bg-red-50 border-l-4 border-primary p-6 rounded-r-lg shadow-md">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <i class="fa fa-exclamation-triangle text-primary text-2xl"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-bold text-dark">注意注意！前方高能！</h3>
+                        <p class="text-dark/70 mt-2">别用你那张喝奶茶被抓拍的表情包当证件照！招生老师也是有幽默感的，但不代表他们会录取一个看起来像表情包的学生！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行动号召区域 -->
+    <section id="action" class="py-20 bg-gradient-to-r from-primary/90 to-secondary/90 text-white relative overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('https://picsum.photos/seed/pattern/1000/1000')] opacity-10"></div>
+            <div class="absolute top-20 right-20 w-40 h-40 bg-white/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-20 w-60 h-60 bg-white/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-[clamp(2rem,5vw,3rem)] font-bold mb-6 animate-float">还在等什么？</h2>
+                <p class="text-xl mb-10 text-white/90">再磨蹭，名额就被你那"猪队友"抢走啦！赶紧行动起来！</p>
+                
+                <a href="#" class="inline-block bg-white text-primary font-bold px-10 py-5 rounded-full text-xl shadow-xl transform hover:scale-105 hover:-rotate-1 transition-all duration-300 mb-8">
+                    <i class="fa fa-rocket mr-2"></i>立即进入网申系统
+                </a>
+                
+                <div class="flex flex-wrap justify-center gap-6 text-lg">
+                    <div class="flex items-center">
+                        <i class="fa fa-clock-o mr-2"></i>
+                        <span>截止日期：别问，问就是快了</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa fa-phone mr-2"></i>
+                        <span>咨询电话：12345678（别打太晚）</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa fa-question-circle mr-2"></i>
+                        <span>有问题？问度娘先</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center justify-center md:justify-start">
+                        <i class="fa fa-rocket text-primary text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">湖北提前批网申</span>
+                    </div>
+                    <p class="text-white/60 mt-2 text-center md:text-left">搞笑归搞笑，申请要认真哦！</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-white/60 hover:text-primary transition-colors duration-300">
+                        <i class="fa fa-weibo text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white/60 hover:text-primary transition-colors duration-300">
+                        <i class="fa fa-wechat text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white/60 hover:text-primary transition-colors duration-300">
+                        <i class="fa fa-qq text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white/60 hover:text-primary transition-colors duration-300">
+                        <i class="fa fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-white/60 text-sm">
+                <p>© 2023 湖北提前批网申搞笑宣传页 | 本页面仅供娱乐，具体请以官方信息为准</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300 opacity-0 invisible">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 回到顶部按钮
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // 图片加载动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            
+            images.forEach(img => {
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.5s ease-in-out';
+                
+                img.onload = () => {
+                    img.style.opacity = '1';
+                };
+                
+                // 如果图片已经缓存
+                if (img.complete) {
+                    img.style.opacity = '1';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
